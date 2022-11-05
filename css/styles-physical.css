@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'isaac';
+    src: url('/fonts/charter-bold-italic.otf');
+}
+@font-face {
+    font-family: 'isaac';
+    src: url('/fonts/charter-bold.otf');
+}
+@font-face {
+    font-family: 'isaac';
+    src: url('/fonts/charter-italic.otf');
+}
+@font-face {
+    font-family: 'isaac';
+    src: url('/fonts/charter-regular.otf');
+}
+:root{
+    --gray-30:#212429;
+    --gray-20:#212121;
+    --gray-10:#616161;
+}
+.debug{
+    box-shadow:inset 0 0 0 25px red;
+    outline:15px solid red !important;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--gray-20);
+    font-family: isaac;
+    margin: 0;
+}
+.header{
+    position: sticky;
+    top: 0;
+}
+.header-content{
+    position: relative;
+}
+.main{
+    
+    /* position: relative; */
+}
+.wrapper{
+    
+    width: 902px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-content{
+}
+a{
+    color: var(--gray-20);
+}
+header{
+    font-size: 14px;
+    color: var(--gray-10);
+    position: absolute;
+    width: 200px;
+    left: -232px;
+    top:64px;
+}
+header li{
+    margin-bottom: 16px;
+}
+header a{
+    color: var(--gray-10);
+    text-decoration: none;
+}
+header a:hover{
+    color:var(--gray-20);
+}
+nav summary{
+    font-weight: bold;
+    line-height: 24px;
+}
+h1{
+    font-size: 60px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+}
+h1 + p{
+    /* margin-bottom: 64px; */
+}
+hr{
+    margin: 64px 0;
+}
+h2{
+    font-size: 2em;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+h3{
+    font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-weight: normal;
+}
+pre{
+    background-color: #FEC62E;
+    padding: 40px;
+}
+.hero{
+    background-image:linear-gradient(to top, rgba(255,255,255,.5),transparent), url('/images/patron.png') ;
+    height: 350px;
+}
+.list-item{
+    margin-top: 164px;
+}
+.list-item:first-of-type{
+    margin: 0;
+}
+.list-item img{
+    margin-top: 40px;
+}
+.list-item ol li{
+    line-height: 24px;
+}
+.list-item ul li{
+    margin: 16px;
+}
+.list-item h3{
+    counter-increment: numberList ;
+    margin-bottom: 8px;
+    position: relative;
+}
+.list-item h3::before{
+    content: counter(numberList)". ";
+}
+.list-item h3::after{
+    content:'';
+    background-color:var(--gray-30);
+    width: 80px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+}
+blockquote{
+    font-size: 24px;
+    margin: 32px 0;
+    padding-left: 16px;
+    line-height: 24px;
+    border-left: 4px solid var(--gray-30);
+}
+blockquote + hr{
+    display: none;
+}
